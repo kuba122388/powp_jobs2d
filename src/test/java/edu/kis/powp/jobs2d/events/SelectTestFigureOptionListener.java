@@ -3,6 +3,9 @@ package edu.kis.powp.jobs2d.events;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import edu.kis.powp.command.DriverCommand;
+import edu.kis.powp.command.OperateToCommand;
+import edu.kis.powp.command.SetPositionCommand;
 import edu.kis.powp.jobs2d.Figures;
 import edu.kis.powp.jobs2d.drivers.DriverManager;
 import edu.kis.powp.jobs2d.drivers.adapter.Job2dDriverAbstractDriverAdapter;
@@ -25,6 +28,18 @@ public class SelectTestFigureOptionListener implements ActionListener {
             FiguresJoe.figureScript2(driverManager.getCurrentDriver());
         } else if (e.getActionCommand().equals(Figures.FIG3.getFigure())){
             FiguresJane.figureScript(new Job2dDriverAbstractDriverAdapter(driverManager.getCurrentDriver()));
+        } else if (e.getActionCommand().equals(Figures.FIG4.getFigure())){
+            DriverCommand driverCommand = new SetPositionCommand(0,0);
+            DriverCommand driverCommand1 = new OperateToCommand(0,100);
+            DriverCommand driverCommand2 = new OperateToCommand(100,100);
+            DriverCommand driverCommand3 = new OperateToCommand(100,0);
+            DriverCommand driverCommand4 = new OperateToCommand(0,0);
+
+            driverCommand.execute(driverManager.getCurrentDriver());
+            driverCommand1.execute(driverManager.getCurrentDriver());
+            driverCommand2.execute(driverManager.getCurrentDriver());
+            driverCommand3.execute(driverManager.getCurrentDriver());
+            driverCommand4.execute(driverManager.getCurrentDriver());
         }
     }
 }

@@ -3,7 +3,8 @@ package edu.kis.powp.jobs2d;
 public enum Figures {
     FIG1("Figure Joe 1"),
     FIG2("Figure Joe 2"),
-    FIG3("Figures Jane");
+    FIG3("Figures Jane"),
+    FIG4("Custom Command");
 
     private final String figure;
 
