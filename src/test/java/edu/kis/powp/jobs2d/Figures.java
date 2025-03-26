@@ -4,7 +4,9 @@ public enum Figures {
     FIG1("Figure Joe 1"),
     FIG2("Figure Joe 2"),
     FIG3("Figures Jane"),
-    FIG4("Custom Command");
+    FIG4("Custom Command"),
+    FIG5("Square"),
+    FIG6("Triangle");
 
     private final String figure;
 
